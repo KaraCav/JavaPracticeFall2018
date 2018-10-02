@@ -47,3 +47,29 @@ public class Absolute {
    return larger(arg1, larger(arg2, arg3)); 
   }
 }
+
+// 3. While loops
+public class WhileLoops {
+  public static void main(String[] args) {
+  int limit = 20;
+  int counter = 0;
+  System.out.println("start");
+  while(counter < limit){
+    if(counter % 2 == 0){
+      System.out.println("even");
+    } else {
+      System.out.println("odd");
+    }
+    counter++;
+  }
+  boolean flag = true;
+  while(flag){
+    System.out.println(counter);
+    if(counter == 2){
+      flag = !flag;
+    } 
+    counter--;
+  }
+    System.out.println("end");
+  }
+}
