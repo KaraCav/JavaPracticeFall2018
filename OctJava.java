@@ -62,3 +62,44 @@ public class Palindromes{
      return true; // returns to if(isAPalendrome(true))
   }
 }
+// 3. Guess a Number Game
+
+import java.util.*;
+
+public class FirstNumberGame {
+    public static void main(String[] args){
+  
+      Scanner userInput = new Scanner(System.in); //1. used to get input of the primitive types like int, double etc.
+                          // pass the predefined object System.in, which represents the standard input stream
+      int correctAnswer = (int)Math.ceil(Math.random() * 10);
+
+      // int userGuess = -1;
+      
+      System.out.println("I am thinking of a number from 1 to 100.");
+      System.out.println("You have three tries to guess my number, or enter -1 to exit.");
+      
+      for(int i = 0; i < 3; i++){
+        System.out.println("Please guess a number");
+        int userGuess = userInput.nextInt();
+        if(userGuess > correctAnswer){
+         System.out.println("Your number is too high!"); 
+        }
+        else if(userGuess < correctAnswer){
+         System.out.println("Your number is too low!"); 
+        }
+        else{
+         System.out.println("You got it! I owe you a drink!"); 
+         break;
+        }
+      }
+      
+              //continue taking input from scanner in loop
+//    while(userGuess > -1) {    // if input is -1 break loop
+//
+//    }
+      
+ }
+     // if(userGuess != correctAnswer){
+        System.out.println("Sorry, the mumber I was thinking of was " + correctAnswer);
+      // }
+}
