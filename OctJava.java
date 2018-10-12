@@ -103,3 +103,42 @@ public class FirstNumberGame {
         System.out.println("Sorry, the mumber I was thinking of was " + correctAnswer);
       // }
 }
+
+// 4. Second type of number game- guess once within 3 of correct number
+
+import java.util.*;
+
+public class SecondNumberGame {
+        
+    Scanner userInput = new Scanner(System.in); 
+    int correctAnswer;
+    Integer userGuess;
+    
+    public static void main(String[] args) {
+      
+        System.out.println("I am thinking of a number from 1 to 100.");
+        System.out.println("Guess my number or enter -1 to exit.");
+
+        while(userGuess != -1) {  //continue taking input from scanner in loop
+          randomNum();
+          getInput();      
+        }   
+  
+ }
+   public static void getInput(){
+          int userGuess = userInput.nextInt();
+   }
+        
+   public static void randomNum(){
+      correctAnswer = (int)Math.ceil(Math.random() * 100);
+   }  
+   
+   public static Boolean checkGuess(){
+     if(){
+     
+      }
+   }
+     // if(userGuess != correctAnswer){
+       // System.out.println("Sorry, the mumber I was thinking of was " + correctAnswer);
+      // }
+}
