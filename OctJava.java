@@ -142,3 +142,15 @@ public class SecondNumberGame {
        // System.out.println("Sorry, the mumber I was thinking of was " + correctAnswer);
       // }
 }
+
+// 5. CodeWars String Repeat: Write a function called repeatStr which repeats the given string string exactly n times.
+  // repeatStr(6, "I") // "IIIIII"
+public class Solution {
+    public static String repeatStr(final int repeat, final String string) {
+    String largeString = "";
+    for(int i = 0; i < repeat; i++){
+      largeString += string;
+    }
+        return largeString;
+    }
+}
