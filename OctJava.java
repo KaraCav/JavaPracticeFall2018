@@ -154,3 +154,16 @@ public class Solution {
         return largeString;
     }
 }
+
+// 6. Codewars Add All Positive Integers in an Array
+public class Positive{
+  public static int sum(int[] arr){
+    int totalNum = 0;
+    for(int i = 0 ; i < arr.length ; i++) {
+      if(arr[i] > 0){
+      totalNum += arr[i];
+      }
+    }
+    return totalNum;
+  }
+}
