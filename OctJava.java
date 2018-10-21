@@ -167,3 +167,16 @@ public class Positive{
     return totalNum;
   }
 }
+
+// 7. Reversed Sequence: Get the number n (n > 0) to return the reversed sequence from n to 1. Ex.: n = 5 >> [5,4,3,2,1]
+public class Sequence{
+
+  public static int[] reverse(int n){
+    
+    int[] toReturn = new int[n];
+    for(int i = 0; i < n; i++) {
+      toReturn[i] = n - i;
+    }
+   return toReturn;
+  }
+}
