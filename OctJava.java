@@ -168,7 +168,7 @@ public class Positive{
   }
 }
 
-// 7. Reversed Sequence: Get the number n (n > 0) to return the reversed sequence from n to 1. Ex.: n = 5 >> [5,4,3,2,1]
+// 7. CodeWars- Reversed Sequence: Get the number n (n > 0) to return the reversed sequence from n to 1. Ex.: n = 5 >> [5,4,3,2,1]
 public class Sequence{
 
   public static int[] reverse(int n){
@@ -179,4 +179,16 @@ public class Sequence{
     }
    return toReturn;
   }
+}
+
+// 8. Leetcode- Two Sum
+public int[] twoSum(int[] nums, int target) {
+    for (int i = 0; i < nums.length; i++) {
+        for (int j = i + 1; j < nums.length; j++) {
+            if (nums[j] == target - nums[i]) {
+                return new int[] { i, j };
+            }
+        }
+    }
+    throw new IllegalArgumentException("No solution");
 }
