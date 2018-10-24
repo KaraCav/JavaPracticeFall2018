@@ -192,3 +192,12 @@ public int[] twoSum(int[] nums, int target) {
     }
     throw new IllegalArgumentException("No solution");
 }
+
+//9. Codewars -> best way to convert integer to string
+class Kata {
+  public static String numberToString(int num) {
+return String.valueOf(num);
+  }
+}
+// String.valueOf() is better than string concatenation, which the compiler wil replace with StringBuffer or StringBuilder
+// That involves an extra object which in a loop would cause a lot of temporary objects
