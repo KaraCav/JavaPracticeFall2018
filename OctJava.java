@@ -193,7 +193,7 @@ public int[] twoSum(int[] nums, int target) {
     throw new IllegalArgumentException("No solution");
 }
 
-//9. Codewars -> best way to convert integer to string
+// 9. Codewars -> best way to convert integer to string
 class Kata {
   public static String numberToString(int num) {
 return String.valueOf(num);
@@ -201,3 +201,22 @@ return String.valueOf(num);
 }
 // String.valueOf() is better than string concatenation, which the compiler wil replace with StringBuffer or StringBuilder
 // That involves an extra object which in a loop would cause a lot of temporary objects
+
+// 10. Codewars -> Return the result of an array where each number is multiplied by 2
+import java.util.*;
+public class Maps {
+  public static int[] map(int[] arr) {
+      return Arrays.stream(arr).map(x -> x*2).toArray();
+  }
+}
+// OR
+public class Maps {
+
+  public static int[] map(int[] inputArray) {
+  
+  for (int i = 0; i < inputArray.length; i++) {
+      inputArray[i] = inputArray[i]*2;
+    } 
+  return inputArray;
+  } 
+}
