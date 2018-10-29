@@ -220,3 +220,42 @@ public class Maps {
   return inputArray;
   } 
 }
+
+// 11A. Code wars: Number of People on the Bus- You are provided with a list (or array) of integer arrays (or tuples). 
+// Each array has two items- # of ppl getting into bus (first item) and # of ppl get off the bus (second item) at a stop.
+// Return number of people who are still in the bus after the last bus station (after the last array). 
+import java.util.ArrayList;
+class Metro {
+public static int countPassengers(ArrayList<int[]> stops) {
+ int people = 0;
+        for (int i = 0; i < stops.size(); i++) {
+            people += stops.get(i)[0] - stops.get(i)[1];
+        }
+        return people;
+  }
+}
+// 11B. Answer with int array instead of ArrayList
+public class CWBusStop {
+  
+ // int[][] transfer = new int[5][2];  => how to declare new 2D array with 5 columns and 2 rows(items in each)
+ // int[] index = new int[] { 2, 0 };  => to manually assign values of first column with values of 2 and 0
+  
+  static int[][] transfer = new int[][]{
+    { 2, 0 }, 
+    { 2, 1 }, 
+    { 4, 6 }, 
+    { 3, 1 }, 
+    { 0, 1 }, 
+  };
+  
+  public static void main(String[] args) {
+     int total = 0;
+       
+       for(int i = 0; i < transfer.length; i++) {
+         total = total + (transfer[i][0] - transfer[i][1]);
+       
+       } 
+           System.out.println(total);
+  }
+  
+}
